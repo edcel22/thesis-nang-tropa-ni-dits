@@ -1,0 +1,3 @@
+// customer & seller registration - done
+//customer login - done
+//seller login - ongoing

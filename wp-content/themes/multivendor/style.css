@@ -1,0 +1,249 @@
+/*
+Theme Name: multivendor
+Theme URI: https://wordpress.org/themes/multivendor/
+Author: the XUnicorn team
+Author URI: https://wordpress.org/
+*/
+
+body {
+
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+nav {
+	background-color: #b63d1b;
+	color: white;
+	box-shadow: 0px 15px 10px -15px rgba(0,0,0,0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 9;
+	display: none;
+}
+nav .nav_wrapper {
+	padding: 0 40px;
+}
+nav .nav_wrapper .nav_links {
+	justify-content: space-between;
+	display: flex;
+}
+nav .left {
+	display: flex;
+}
+nav .left .logo {
+	height: 100%;
+	padding: 20px;
+	background-color: #fac842;
+	color: black;
+	font-size: 14px;
+	font-family: arial;
+	letter-spacing: 2px;
+}
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+	display: flex;
+	align-self: center;
+	transition: .3s;
+	border-bottom: 2px solid transparent;
+}
+nav a:hover {
+	border-bottom: 2px solid #fac842;
+	color: #fac842;
+}
+nav .right {
+	display: flex;
+}
+nav li {
+	list-style-type: none;
+	padding: 5px 10px;
+	margin: 0 10px;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+}
+.banner {
+	height: 100vh;
+	position: relative;
+}
+.banner img {
+	height: 100%;
+	width: 100%;
+	object-position: center;
+	object-fit: cover;
+}
+.banner .overlay {
+	background-color: #00000082;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.banner .overlay h1,
+.banner .overlay p {
+	color: white;
+	font-family: arial;
+	text-shadow: 1px 1px black;
+}
+.banner .overlay p {
+	width: 50%;
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+section {
+	width: 100%;
+	max-width: 90%;
+	background-color: white;
+	padding: 20px;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+}
+section .section_wrapper {
+	display: flex;
+}
+section .section_wrapper .items {
+	display: flex;
+	flex-direction: column;
+}
+.section_wrapper .item {
+	display: flex;
+	align-items: center;
+}
+.section_wrapper .item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.section_wrapper .item .left {
+	flex: 0 0 50%;
+}
+.section_wrapper .item .left img {
+	width: 100%;
+}
+.section_wrapper .item .right {
+	padding: 20px;
+}
+.section_wrapper .item .right .title {
+	font-family: arial;
+	font-size: 24px;
+	font-weight: 700;
+    line-height: 1.2;
+    color: #1d2228;
+    margin-bottom: 10px;
+}
+.section_wrapper .item .right .description {
+	font-family: arial;
+	font-size: 16px;
+    color: #1d2228;
+    letter-spacing: 1.5px;
+    line-height: 24px;
+}
+h2 {
+	font-family: arial;
+	font-size: 28px;
+    color: #1d2228;
+    text-align: center;
+    padding: 20px 0 40px;
+}
+footer .footer_wrapper {
+	width: 100%;
+    background-color: #ff5200;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+footer img {
+	width: 50px;
+	height: 50px;
+	margin: 0 5px;
+}
+footer p {
+	font-family: arial;
+	font-size: 16px;
+	color: white;
+}
+form {
+	padding-bottom: 40px;
+}
+.form_container {
+	width: 100%;
+	max-width: 50%;
+	margin: 0 auto;
+}
+.form_container .form_group {
+	display: flex;
+	flex-flow: column wrap;
+	margin-bottom: 20px;
+}
+.form_group label {
+	font-family: arial;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #1d2228;
+    margin-bottom: 5px;
+}
+.form_group input,
+.form_group textarea {
+	font-family: arial;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	color: #1d2228;
+	border: 1px solid #1d2228;
+	padding: 10px;
+	background-color: #8080801a;
+	transition: .3s ease-in-out;
+	outline: none;
+}
+.form_group input:hover,
+.form_group textarea:hover,
+.form_group input:focus,
+.form_group textarea:focus { 
+	border: 1px solid #d60606;
+}
+.button_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.btn-submit {
+	border: 1px solid red;
+	cursor: pointer;
+	background-color: red;
+	padding: 10px 20px;
+	font-family: arial;
+	color: white;
+	border-radius: 15px;
+	transition: .3s ease-in-out;
+}
+.submit:hover {
+	background-color: #d60606;
+	border: 1px solid #d60606;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
