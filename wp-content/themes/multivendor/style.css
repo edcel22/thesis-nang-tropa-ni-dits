@@ -23,7 +23,7 @@ nav {
 	right: 0;
 	width: 100%;
 	z-index: 9;
-	display: none;
+	/*display: none;*/
 }
 nav .nav_wrapper {
 	padding: 0 40px;
@@ -162,7 +162,7 @@ h2 {
 }
 footer .footer_wrapper {
 	width: 100%;
-    background-color: #ff5200;
+    background-color: #b63d1b;
     padding: 20px;
     display: flex;
     flex-flow: row wrap;
@@ -246,4 +246,54 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+#menu .items {
+	display: flex;
+	flex-flow: row wrap;
+}
+#menu .items .item {
+	width: 100%;
+	flex: 0 0 calc(33.33% - 20px);
+	margin: 0 10px 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#menu .items .item img {
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	height: 200px;
+	vertical-align: bottom;
+}
+#menu .items .item .bottom {
+	background-color: #80808012;
+	padding: 20px 10px;
+}
+#menu .items .item .title {
+	font-family: arial;
+	color: #1d2228;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 5px 0 10px;
+}
+#menu .items .item .title {
+	font-family: arial;
+	color: #1d2228;
+	font-size: 14px;
+}
+#menu .items .item .buy_now {
+	border: 1px solid red;
+    cursor: pointer;
+    background-color: red;
+    padding: 10px 20px;
+    font-family: arial;
+    color: white;
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 107px;
+    margin-top: 20px;
 }

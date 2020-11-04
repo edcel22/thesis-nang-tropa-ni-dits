@@ -24,7 +24,18 @@ function seafront_setup() {
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
 	// add html5 support to form
-	add_theme_support( 'html5', array('search-form') );
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'script',
+			'style',
+		)
+	);
 
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1568, 9999 );
