@@ -18,15 +18,18 @@
 				</div>
 				<div class="right">
 					<ul>
-						<li><a href="<?php echo site_url('wp-login.php'); ?>">Login</a></li>
-						<li><a href="<?php echo site_url('wp-login.php?action=register'); ?>">Register</a></li>
 						<?php
 							if( is_user_logged_in() ): ?>
-								<li>WOW</li>
+							<li><a href="<?php echo site_url('/wp-login.php?action=logout'); ?>">Logout</a></li>
 						<?php
-							endif;
+							else:
 						 ?>
-						<li><a href="">Contact Us</a></li>
+						<li><a href="<?php echo site_url('wp-login.php'); ?>">Login</a></li>
+						<li><a href="<?php echo site_url('wp-login.php?action=register'); ?>">Register</a></li>
+						 <?php 
+						 	endif;
+						 ?>
+						<li><a href="/contact-us">Contact Us</a></li>
 					</ul>
 				</div>
 			</div>

@@ -140,5 +140,5 @@ add_action('init', 'store_custom_post');
 /** 
  * Email SMTP
  */
-define( 'WPMS_ON', true );
-define( 'WPMS_SMTP_PASS', 'mkixukzaamwhkiwd' );
+// define( 'WPMS_ON', true );
+// define( 'WPMS_SMTP_PASS', 'mkixukzaamwhkiwd' );
