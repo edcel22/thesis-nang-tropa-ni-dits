@@ -136,6 +136,10 @@ function store_custom_post() {
 }
 add_action('init', 'store_custom_post');
 
+add_action( 'wp_roles_init', static function ( \WP_Roles $roles ) {
+    $roles->roles['author']['name'] = 'Seller';
+    $roles->role_names['author'] = 'Seller';
+} );
 
 /** 
  * Email SMTP
