@@ -2,9 +2,6 @@
 
 define( 'FS_METHOD', 'direct' );
 
-require get_template_directory().'/inc/templates/theme-support.php';
-require get_template_directory().'/inc/custom-post-type.php';
-require get_template_directory().'/inc/ajax.php';
 
 	/*SETUP*/
 function seafront_setup() {
@@ -146,3 +143,16 @@ add_action( 'wp_roles_init', static function ( \WP_Roles $roles ) {
  */
 // define( 'WPMS_ON', true );
 // define( 'WPMS_SMTP_PASS', 'mkixukzaamwhkiwd' );
+
+
+function local_script() {
+    global $wp_query;
+
+    // Localize
+    wp_localize_script('scripts', 'aparams', array(
+      'ajaxurl' => admin_url('admin-ajax.php'),
+    ));
+}
+add_action( 'wp_enqueue_scripts', 'local_script' );
+
+require get_template_directory().'/inc/contact.php';
