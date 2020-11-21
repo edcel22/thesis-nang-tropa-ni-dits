@@ -37,7 +37,7 @@
 		<section id="contact_us">
 			<h2>Interested? Send us a message.</h2>
 			<div class="form_container">
-				<form id="sunsetContactForm" action="<?php echo admin_url('admin-ajax.php'); ?>" method="post" >
+				<form id="sunsetContactForm" name="sunsetContactForm" method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" autocomplete="off">
 					<div class="form_group">
 						<label for="fullname">Full Name</label>
 						<input type="text" name="fullname" id="fullname">
@@ -55,8 +55,9 @@
 						<textarea class="message" name="message" rows="5" id="message"></textarea>
 					</div>
 					<div class="button_container">
-						<button type="submit" class="btn-submit" >SUBMIT</button>
+						<button type="submit" id="btn_submit" class="btn-submit" >SUBMIT</button>
 					</div>
+                	<input type="hidden" name="action" value="sunset_save_user_contact_form">
 				</form>
 			</div>
 		</section>
