@@ -138,6 +138,11 @@ add_action( 'wp_roles_init', static function ( \WP_Roles $roles ) {
     $roles->role_names['author'] = 'Seller';
 } );
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
+
 /** 
  * Email SMTP
  */
